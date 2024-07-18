@@ -15,7 +15,7 @@ apiRouter.get('/', (req, res) => {
 
 apiRouter.get('/counter', (req, res) => {
 	counter = counter + 1;
-	res.json({'counter': `$(counter)`});
+	res.json({'counter': `${counter}`});
 });
 
 app.use(`${process.env.EXPRESS_APP_URL_PREFIX}`, apiRouter);
